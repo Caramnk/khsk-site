@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+alunos_kadai*/
+alunos_kaidai*/
+rascunho/
