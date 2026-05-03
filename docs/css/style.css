@@ -149,7 +149,7 @@ nav a {
 
 .publication {
   display: grid;
-  grid-template-columns: minmax(0, 208px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 50%) minmax(0, 1fr);
   gap: 20px 28px;
   align-items: start;
   padding: 24px 0;
@@ -166,7 +166,7 @@ nav a {
   align-items: center;
   gap: 10px;
   width: 100%;
-  max-width: 208px;
+  max-width: none;
 }
 
 .number {
@@ -209,7 +209,7 @@ nav a {
 .publication-figure {
   margin: 0;
   width: 100%;
-  max-width: 192px;
+  max-width: 100%;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #dce6ef;
