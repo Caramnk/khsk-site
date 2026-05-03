@@ -147,9 +147,10 @@ nav a {
   padding-left: 16px;
 }
 
+/* Coluna das figuras ~75% do espaço útil; texto ~25% (proporção 3fr : 1fr) */
 .publication {
   display: grid;
-  grid-template-columns: minmax(0, 75%) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
   gap: 20px 28px;
   align-items: start;
   padding: 24px 0;
