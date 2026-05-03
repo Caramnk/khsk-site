@@ -280,6 +280,62 @@ nav a {
   font-weight: 600;
 }
 
+/* 主要論文: título como no anexo + link researchmap (especificidade > .card h2 span) */
+#publications .publications-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 14px;
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+#publications .publications-heading .publications-heading-ja {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0a2540;
+  letter-spacing: 0.02em;
+}
+
+#publications .publications-heading .publications-heading-en {
+  font-size: 15px;
+  font-weight: 600;
+  color: #7d8a99;
+  margin-left: 0;
+}
+
+.publications-more {
+  margin: 28px 0 0;
+  padding: 0;
+}
+
+.publications-more-link {
+  display: inline-block;
+  color: #1a6fd4;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.publications-more-link:hover {
+  text-decoration: underline;
+}
+
+.publications-more-ja,
+.publications-more-arrow {
+  display: inline;
+}
+
+.publications-more-en {
+  display: block;
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -385,5 +441,14 @@ footer {
   .publication-body {
     grid-column: 1;
     grid-row: 2;
+  }
+
+  #publications .publications-heading,
+  #publications .publications-heading .publications-heading-ja {
+    font-size: 24px;
+  }
+
+  #publications .publications-heading .publications-heading-en {
+    font-size: 14px;
   }
 }
