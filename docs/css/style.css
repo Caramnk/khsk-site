@@ -161,6 +161,21 @@ nav a {
   line-height: 1.5;
 }
 
+.publication-figure {
+  margin: 18px 0 6px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #dce6ef;
+  background: #f4f8fc;
+}
+
+.publication-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: bottom;
+}
+
 .publication a {
   color: #1d75d8;
   text-decoration: none;
