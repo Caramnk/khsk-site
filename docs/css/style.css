@@ -149,7 +149,7 @@ nav a {
 
 .publication {
   display: grid;
-  grid-template-columns: minmax(0, 168px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 208px) minmax(0, 1fr);
   gap: 20px 28px;
   align-items: start;
   padding: 24px 0;
@@ -166,7 +166,7 @@ nav a {
   align-items: center;
   gap: 10px;
   width: 100%;
-  max-width: 168px;
+  max-width: 208px;
 }
 
 .number {
@@ -209,7 +209,7 @@ nav a {
 .publication-figure {
   margin: 0;
   width: 100%;
-  max-width: 152px;
+  max-width: 192px;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #dce6ef;
@@ -323,6 +323,6 @@ footer {
   }
 
   .publication-figure {
-    max-width: min(140px, 42vw);
+    max-width: min(176px, 52vw);
   }
 }
