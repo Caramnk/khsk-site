@@ -231,6 +231,20 @@ nav a {
   vertical-align: bottom;
 }
 
+/* Cartão mais largo + sangria no padding + zoom: figuras bem maiores a ver */
+#publications.card {
+  max-width: min(1320px, calc(100vw - 24px));
+  overflow: visible;
+}
+
+#publications .publication-figure {
+  margin-left: -32px;
+  margin-right: -32px;
+  margin-top: 4px;
+  width: calc(100% + 64px);
+  zoom: 1.22;
+}
+
 .publication a {
   color: #1d75d8;
   text-decoration: none;
@@ -313,6 +327,13 @@ footer {
   .card {
     margin: 20px;
     padding: 24px;
+  }
+
+  #publications .publication-figure {
+    margin-left: -24px;
+    margin-right: -24px;
+    width: calc(100% + 48px);
+    zoom: 1.12;
   }
 
   .publication {
