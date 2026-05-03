@@ -118,10 +118,36 @@ nav a {
   font-size: 26px;
 }
 
-.card h2 span {
+/* Títulos bilíngues: japonês em cima, inglês por baixo */
+.card h2.card-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin: 0 0 16px;
+  line-height: 1.25;
+}
+
+.card h2.card-heading .card-heading-ja {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0a2540;
+  letter-spacing: 0.02em;
+}
+
+.card h2.card-heading .card-heading-en {
   font-size: 15px;
-  color: #6a7b8c;
-  margin-left: 10px;
+  font-weight: 600;
+  color: #7d8a99;
+  margin-left: 0;
+}
+
+#publications.card h2.card-heading .card-heading-ja {
+  font-size: 30px;
+}
+
+#publications.card h2.card-heading {
+  margin-bottom: 12px;
 }
 
 .card p,
@@ -280,32 +306,6 @@ nav a {
   font-weight: 600;
 }
 
-/* 主要論文: título como no anexo + link researchmap (especificidade > .card h2 span) */
-#publications .publications-heading {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0 14px;
-  margin: 0 0 8px;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.25;
-}
-
-#publications .publications-heading .publications-heading-ja {
-  font-size: 30px;
-  font-weight: 700;
-  color: #0a2540;
-  letter-spacing: 0.02em;
-}
-
-#publications .publications-heading .publications-heading-en {
-  font-size: 15px;
-  font-weight: 600;
-  color: #7d8a99;
-  margin-left: 0;
-}
-
 .publications-more {
   margin: 28px 0 0;
   padding: 0;
@@ -443,12 +443,15 @@ footer {
     grid-row: 2;
   }
 
-  #publications .publications-heading,
-  #publications .publications-heading .publications-heading-ja {
+  .card h2.card-heading .card-heading-ja {
+    font-size: 22px;
+  }
+
+  #publications.card h2.card-heading .card-heading-ja {
     font-size: 24px;
   }
 
-  #publications .publications-heading .publications-heading-en {
+  .card h2.card-heading .card-heading-en {
     font-size: 14px;
   }
 }
