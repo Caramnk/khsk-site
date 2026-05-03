@@ -133,12 +133,40 @@ nav a {
 .areas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 0;
+  text-align: center;
 }
 
-.areas div {
-  border-left: 4px solid #2a8bd8;
-  padding-left: 16px;
+.area-item {
+  padding: 8px 20px 0;
+  border-left: 1px solid #e4ebf2;
+  min-width: 0;
+}
+
+.area-item:first-child {
+  border-left: none;
+}
+
+.area-icon {
+  width: 72px;
+  height: auto;
+  max-height: 56px;
+  object-fit: contain;
+  margin: 0 auto 14px;
+  display: block;
+}
+
+.area-item h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  color: #082c4e;
+}
+
+.area-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #5a6b7c;
+  line-height: 1.55;
 }
 
 /* Bloco esquerdo: penúltimo tamanho (até min(48vw, 560px)) — número + figura; texto à direita */
@@ -312,6 +340,21 @@ footer {
   .areas,
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .area-item {
+    border-left: none;
+    border-bottom: 1px solid #e4ebf2;
+    padding: 16px 0 20px;
+  }
+
+  .area-item:first-child {
+    padding-top: 0;
+  }
+
+  .area-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
   .card {
