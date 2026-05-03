@@ -133,9 +133,10 @@ nav a {
 
 .publication {
   display: grid;
-  grid-template-columns: 54px 1fr;
-  gap: 20px;
-  padding: 24px 0;
+  grid-template-columns: 52px minmax(140px, 36%) minmax(0, 1fr);
+  gap: 18px 22px;
+  align-items: start;
+  padding: 28px 0;
   border-bottom: 1px solid #e0e8ef;
 }
 
@@ -155,19 +156,40 @@ nav a {
   font-size: 20px;
 }
 
+.publication-body {
+  min-width: 0;
+}
+
 .publication h3 {
   margin-top: 0;
-  font-size: 22px;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 1.45;
+  color: #0a2540;
+}
+
+.publication-body > p {
+  margin: 0.5rem 0 0;
+}
+
+.publication-body > p:first-of-type strong {
+  color: #1d6fbd;
+  font-size: 15px;
+}
+
+.publication-links {
+  margin-top: 0.75rem !important;
 }
 
 .publication-figure {
-  margin: 14px 0 6px;
-  max-width: min(420px, 100%);
+  margin: 0;
+  width: 100%;
+  max-width: 320px;
+  justify-self: start;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid #dce6ef;
   background: #f4f8fc;
+  box-shadow: 0 2px 8px rgba(10, 40, 80, 0.06);
 }
 
 .publication-figure img {
@@ -252,5 +274,28 @@ footer {
   .card {
     margin: 20px;
     padding: 24px;
+  }
+
+  .publication {
+    grid-template-columns: 44px 1fr;
+    grid-template-rows: auto auto;
+    gap: 14px 16px;
+  }
+
+  .publication .number {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .publication-body {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .publication-figure {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    max-width: min(280px, 88vw);
+    justify-self: center;
   }
 }
