@@ -231,11 +231,11 @@ nav a {
   vertical-align: bottom;
 }
 
-/* Figuras ~12,5% da largura (metade de 25%); centradas na grelha */
+/* Figuras ~6,25% da largura; centradas na grelha */
 #publications .publication-figure {
   justify-self: center;
-  width: 12.5%;
-  max-width: 12.5%;
+  width: 6.25%;
+  max-width: 6.25%;
   min-width: 0;
   margin: 8px auto 0;
   box-sizing: border-box;
@@ -326,8 +326,8 @@ footer {
   }
 
   #publications .publication-figure {
-    width: min(12.5%, 100%);
-    max-width: min(12.5%, 100%);
+    width: min(6.25%, 100%);
+    max-width: min(6.25%, 100%);
   }
 
   .publication {
