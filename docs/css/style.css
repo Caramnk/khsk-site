@@ -147,16 +147,14 @@ nav a {
   padding-left: 16px;
 }
 
-/* Linha 1: número + texto; linha 2: figura a largura total (~2× a miniatura antiga) */
+/* Uma linha: número | figura (esquerda, maior) | texto (direita) */
 .publication {
   display: grid;
-  grid-template-columns: 52px minmax(0, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-columns: 52px clamp(200px, 48vw, 560px) minmax(0, 1fr);
   column-gap: 24px;
-  row-gap: 20px;
   align-items: start;
   min-width: 0;
-  padding: 24px 0;
+  padding: 28px 0;
   border-bottom: 1px solid #e0e8ef;
 }
 
@@ -186,7 +184,7 @@ nav a {
 }
 
 .publication-body {
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 1;
   min-width: 0;
 }
@@ -212,8 +210,8 @@ nav a {
 }
 
 .publication-figure {
-  grid-column: 1 / -1;
-  grid-row: 2;
+  grid-column: 2;
+  grid-row: 1;
   margin: 0;
   width: 100%;
   max-width: none;
@@ -233,23 +231,6 @@ nav a {
   display: block;
   vertical-align: bottom;
   object-fit: contain;
-}
-
-/* Metade da largura da janela (50vw), sem ultrapassar a área do cartão */
-#publications .publication-figure {
-  justify-self: center;
-  width: min(50vw, 100%);
-  max-width: min(50vw, 100%);
-  min-width: 0;
-  margin: 8px auto 0;
-  box-sizing: border-box;
-}
-
-#publications .publication-figure img {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  height: auto;
 }
 
 .publication a {
@@ -337,12 +318,29 @@ footer {
   }
 
   .publication {
-    grid-template-columns: 44px 1fr;
-    column-gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     row-gap: 16px;
+    column-gap: 0;
+    padding: 22px 0;
   }
 
   .publication-aside {
+    grid-column: 1;
+    grid-row: 1;
     justify-content: flex-start;
+  }
+
+  .publication-figure {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    max-width: min(100%, 520px);
+    justify-self: center;
+  }
+
+  .publication-body {
+    grid-column: 1;
+    grid-row: 3;
   }
 }
