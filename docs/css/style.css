@@ -235,11 +235,11 @@ nav a {
   object-fit: contain;
 }
 
-/* % só encolhe se a img não impor min-content intrínseco (min-width: 0 acima) */
+/* Metade da largura da janela (50vw), sem ultrapassar a área do cartão */
 #publications .publication-figure {
   justify-self: center;
-  width: 3.125%;
-  max-width: 3.125%;
+  width: min(50vw, 100%);
+  max-width: min(50vw, 100%);
   min-width: 0;
   margin: 8px auto 0;
   box-sizing: border-box;
@@ -334,11 +334,6 @@ footer {
   .card {
     margin: 20px;
     padding: 24px;
-  }
-
-  #publications .publication-figure {
-    width: min(3.125%, 100%);
-    max-width: min(3.125%, 100%);
   }
 
   .publication {
