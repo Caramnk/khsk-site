@@ -141,10 +141,10 @@ nav a {
   padding-left: 16px;
 }
 
-/* Estilo referência: bloco esquerdo (~38%) = número + figura; direita = texto */
+/* Bloco esquerdo: penúltimo tamanho (até min(48vw, 560px)) — número + figura; texto à direita */
 .publication {
   display: grid;
-  grid-template-columns: minmax(0, 38%) minmax(0, 1fr);
+  grid-template-columns: minmax(220px, min(48vw, 560px)) minmax(0, 1fr);
   column-gap: 28px;
   align-items: start;
   min-width: 0;
@@ -328,7 +328,7 @@ footer {
 
   .publication-media {
     width: 100%;
-    max-width: min(100%, 400px);
+    max-width: min(100%, 520px);
     margin-inline: auto;
   }
 
