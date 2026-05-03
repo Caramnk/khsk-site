@@ -72,12 +72,6 @@ nav a {
   letter-spacing: 0.02em;
 }
 
-.hero-degree {
-  margin: 0 0 12px;
-  font-size: 22px;
-  color: #2c3d4d;
-}
-
 .hero-text h3 {
   color: #1d75d8;
   font-size: 25px;
@@ -308,10 +302,6 @@ footer {
 
   .hero-name-roman {
     font-size: 17px;
-  }
-
-  .hero-degree {
-    font-size: 18px;
   }
 
   .buttons {
