@@ -2,8 +2,28 @@
   box-sizing: border-box;
 }
 
+/* Escala tipográfica por zona (desktop) */
+:root {
+  --fs-topbar-title: 1.375rem; /* 22px */
+  --fs-topbar-meta: 0.875rem; /* 14px */
+  --fs-nav: 0.9375rem; /* 15px */
+  --fs-hero-name: 2.5rem; /* 40px */
+  --fs-hero-role: 1.25rem; /* 20px — cargo JP */
+  --fs-hero-meta: 1.125rem; /* 18px — nome romanizado + cargo EN */
+  --fs-body: 1rem; /* 16px — parágrafos e listas nos cartões */
+  --fs-caption: 0.875rem; /* 14px — legendas, links secundários */
+  --fs-section-ja: 1.625rem; /* 26px — título JP de todas as secções */
+  --fs-section-en: 0.9375rem; /* 15px — linha EN sob o título */
+  --fs-subsection: 1.0625rem; /* 17px — subtítulos (áreas, etc.) */
+  --fs-pub-title: 1.125rem; /* 18px — título do paper */
+  --fs-pub-meta: 0.875rem; /* 14px — revista, links */
+  --fs-pub-more: 1rem; /* 16px — link “ver todos” */
+  --fs-badge: 1rem; /* 16px — número da publicação */
+}
+
 body {
   margin: 0;
+  font-size: var(--fs-body);
   font-family: "Helvetica Neue", Arial, sans-serif;
   background: #f3f7fb;
   color: #0b2447;
@@ -19,11 +39,13 @@ body {
 
 .topbar h1 {
   margin: 0;
-  font-size: 26px;
+  font-size: var(--fs-topbar-title);
+  font-weight: 700;
 }
 
 .topbar p {
   margin: 6px 0 0;
+  font-size: var(--fs-topbar-meta);
   color: #5a6b7c;
 }
 
@@ -32,6 +54,7 @@ nav a {
   color: #0b2447;
   text-decoration: none;
   font-weight: 700;
+  font-size: var(--fs-nav);
 }
 
 .hero {
@@ -58,7 +81,7 @@ nav a {
 }
 
 .hero-name-ja {
-  font-size: 42px;
+  font-size: var(--fs-hero-name);
   font-weight: 700;
   margin: 0 0 4px;
   line-height: 1.2;
@@ -66,7 +89,7 @@ nav a {
 
 .hero-name-roman {
   margin: 0 0 6px;
-  font-size: 20px;
+  font-size: var(--fs-hero-meta);
   font-weight: 500;
   color: #4a6278;
   letter-spacing: 0.02em;
@@ -74,18 +97,27 @@ nav a {
 
 .hero-text h3 {
   color: #1d75d8;
-  font-size: 25px;
+  font-size: var(--fs-hero-role);
+  font-weight: 700;
   margin: 0;
 }
 
 .position {
-  font-size: 23px;
+  font-size: var(--fs-hero-meta);
+  font-weight: 500;
+  color: #4a6278;
   margin-top: 6px;
+}
+
+.hero-text p {
+  font-size: var(--fs-body);
+  line-height: 1.7;
 }
 
 .bio {
   max-width: 650px;
   line-height: 1.7;
+  font-size: var(--fs-body);
 }
 
 .buttons {
@@ -102,6 +134,7 @@ nav a {
   color: #0b57a3;
   text-decoration: none;
   font-weight: 700;
+  font-size: var(--fs-body);
 }
 
 .card {
@@ -115,7 +148,7 @@ nav a {
 
 .card h2 {
   margin-top: 0;
-  font-size: 26px;
+  font-size: var(--fs-section-ja);
 }
 
 /* Títulos bilíngues: japonês em cima, inglês por baixo */
@@ -129,21 +162,18 @@ nav a {
 }
 
 .card h2.card-heading .card-heading-ja {
-  font-size: 26px;
+  font-size: var(--fs-section-ja);
   font-weight: 700;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
   color: #0a2540;
   letter-spacing: 0.02em;
 }
 
 .card h2.card-heading .card-heading-en {
-  font-size: 15px;
+  font-size: var(--fs-section-en);
   font-weight: 600;
   color: #7d8a99;
   margin-left: 0;
-}
-
-#publications.card h2.card-heading .card-heading-ja {
-  font-size: 30px;
 }
 
 #publications.card h2.card-heading {
@@ -153,7 +183,7 @@ nav a {
 .card p,
 .card li {
   line-height: 1.8;
-  font-size: 16px;
+  font-size: var(--fs-body);
 }
 
 .areas {
@@ -189,14 +219,16 @@ nav a {
 
 .area-item h3 {
   margin: 0 0 6px;
-  font-size: 17px;
+  font-size: var(--fs-subsection);
+  font-weight: 700;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
   color: #082c4e;
   width: 100%;
 }
 
 .area-item p {
   margin: 0;
-  font-size: 14px;
+  font-size: var(--fs-caption);
   color: #5a6b7c;
   line-height: 1.55;
   width: 100%;
@@ -240,7 +272,7 @@ nav a {
   display: grid;
   place-items: center;
   font-weight: 700;
-  font-size: 18px;
+  font-size: var(--fs-badge);
   flex-shrink: 0;
 }
 
@@ -252,7 +284,7 @@ nav a {
 
 .publication h3 {
   margin-top: 0;
-  font-size: 19px;
+  font-size: var(--fs-pub-title);
   font-weight: 700;
   line-height: 1.45;
   color: #082c4e;
@@ -265,7 +297,7 @@ nav a {
 
 .publication-body > p:first-of-type strong {
   color: #1e6cba;
-  font-size: 15px;
+  font-size: var(--fs-pub-meta);
   font-weight: 600;
 }
 
@@ -275,7 +307,7 @@ nav a {
   align-items: center;
   gap: 6px 4px;
   margin-top: 0.65rem !important;
-  font-size: 14px;
+  font-size: var(--fs-pub-meta);
 }
 
 .publication-figure {
@@ -296,7 +328,6 @@ nav a {
   min-width: 0;
   height: auto;
   display: block;
-  vertical-align: bottom;
   object-fit: contain;
 }
 
@@ -316,7 +347,7 @@ nav a {
   color: #1a6fd4;
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: var(--fs-pub-more);
   line-height: 1.45;
 }
 
@@ -332,7 +363,7 @@ nav a {
 .publications-more-en {
   display: block;
   margin-top: 4px;
-  font-size: 15px;
+  font-size: var(--fs-section-en);
   font-weight: 600;
 }
 
@@ -357,9 +388,19 @@ footer {
   background: #06234a;
   color: white;
   padding: 22px;
+  font-size: var(--fs-caption);
 }
 
 @media (max-width: 800px) {
+  :root {
+    --fs-hero-name: 2rem; /* 32px */
+    --fs-hero-role: 1.125rem; /* 18px */
+    --fs-hero-meta: 1rem; /* 16px */
+    --fs-section-ja: 1.375rem; /* 22px — títulos de secção (incl. 主要論文) */
+    --fs-section-en: 0.875rem; /* 14px */
+    --fs-topbar-title: 1.25rem; /* 20px */
+  }
+
   .topbar {
     display: block;
     padding: 24px;
@@ -385,14 +426,6 @@ footer {
 
   .profile {
     width: 220px;
-  }
-
-  .hero-name-ja {
-    font-size: 32px;
-  }
-
-  .hero-name-roman {
-    font-size: 17px;
   }
 
   .buttons {
@@ -443,15 +476,4 @@ footer {
     grid-row: 2;
   }
 
-  .card h2.card-heading .card-heading-ja {
-    font-size: 22px;
-  }
-
-  #publications.card h2.card-heading .card-heading-ja {
-    font-size: 24px;
-  }
-
-  .card h2.card-heading .card-heading-en {
-    font-size: 14px;
-  }
 }
